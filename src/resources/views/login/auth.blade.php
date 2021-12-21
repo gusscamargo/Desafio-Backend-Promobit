@@ -18,7 +18,8 @@
         <div class="text-center mb-5 text-dark">Desafio Promobit</div>
         <div class="card my-5">
 
-          <form class="card-body cardbody-color p-lg-5">
+          <form class="card-body cardbody-color p-lg-5" method="POST" action="/auth">
+            @csrf
             <div class="mb-3">
               <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
                 placeholder="User Name">
@@ -31,7 +32,6 @@
             </div>
           </form>
         </div>
-
       </div>
     </div>
     </div> 
