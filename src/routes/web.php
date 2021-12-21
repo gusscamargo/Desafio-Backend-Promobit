@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\Middleware\Authenticate;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,17 +20,21 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TagController;
 
-Route::get('/', IndexController::class);
+// Rotas basicas
+Route::get('/', IndexController::class)->name("login");
+Route::post("/login", [AuthController::class, "authentication"]);
 
-Route::get("/home", HomeController::class);
+Route::middleware(["auth"])->group(function () {
 
-// Auth
-Route::post("/auth", [AuthController::class, "authentication"]);
-Route::get("/logout", [AuthController::class, "logout"]);
+    Route::get("/home", HomeController::class)->name("home")->middleware("auth");
 
-// Tags
-Route::get("/tag", [TagController::class, "showTags"]);
+    // Auth
+    Route::get("/logout", [AuthController::class, "logout"])->name("logout");
+
+    // Tags
+    Route::get("/tag", [TagController::class, "showTags"])->name("tags");
 
 
-// Produtos
-Route::get("/product", [ProductController::class, "showProducts"]);
+    // Produtos
+    Route::get("/product", [ProductController::class, "showProducts"])->name("products");
+});

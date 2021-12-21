@@ -12,20 +12,30 @@
 
 <body>
     <div class="container">
+      @if (count($errors) > 0)
+      <div class="alert alert-danger" role="alert">
+        Ocorreu um problema:
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>  
+          @endforeach
+        </ul>
+      </div>
+      @endif
       <div class="row">
       <div class="col-md-6 offset-md-3">
         <h2 class="text-center text-dark mt-5">Login</h2>
         <div class="text-center mb-5 text-dark">Desafio Promobit</div>
         <div class="card my-5">
 
-          <form class="card-body cardbody-color p-lg-5" method="POST" action="/auth">
+          <form class="card-body cardbody-color p-lg-5" method="POST" action="/login">
             @csrf
             <div class="mb-3">
-              <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
+              <input type="text" class="form-control" name="username" aria-describedby="emailHelp"
                 placeholder="User Name">
             </div>
             <div class="mb-3">
-              <input type="password" class="form-control" id="password" placeholder="password">
+              <input type="password" class="form-control" name="password" placeholder="password">
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary px-5 mb-5 w-100">Login</button>
