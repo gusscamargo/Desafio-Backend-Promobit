@@ -14,9 +14,9 @@
     <div class="container">
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link{{ $currentPage == "products" ? " active" : "" }}">Produtos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link{{ $currentPage == "tags" ? " active" : "" }}">Tags</a></li>
+        <li class="nav-item"><a href="/home" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="/product" class="nav-link{{ $currentPage == "product" ? " active" : "" }}">Produtos</a></li>
+        <li class="nav-item"><a href="/tag" class="nav-link{{ $currentPage == "tag" ? " active" : "" }}">Tags</a></li>
         </ul>
     </header>
     </div>
@@ -25,5 +25,6 @@
     </div>
 </body>
 
+<script src="./js/jquery-3.6.0.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 </html>
