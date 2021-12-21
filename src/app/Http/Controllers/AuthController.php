@@ -20,7 +20,7 @@ class AuthController extends Controller
             return redirect()->intended("home");
         }
 
-        return back()->withErrors(['errors' => 'Usuario ou Senha invalidos']);;
+        return back()->withErrors(['errors' => 'Usuario ou Senha invalidos']);
     }
 
     public function logout(Request $request){
