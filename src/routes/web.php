@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Middleware\Authenticate;
@@ -23,6 +24,7 @@ use App\Http\Controllers\TagController;
 // Rotas basicas
 Route::get('/', IndexController::class)->name("login");
 Route::post("/login", [AuthController::class, "authentication"]);
+Route::get("/login", ErrorController::class);
 
 Route::middleware(["auth"])->group(function () {
 
