@@ -15,7 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TagController;
 
 Route::get('/', IndexController::class);
 
 Route::get("/home", HomeController::class);
+
+
+// Tags
+Route::get("/tag", [TagController::class, "showTags"]);
+
+
+// Produtos
+Route::get("/product", [ProductController::class, "showProducts"]);
