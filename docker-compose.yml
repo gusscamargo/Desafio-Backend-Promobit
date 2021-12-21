@@ -48,6 +48,12 @@ services:
       PMA_USER: "root"
       PMA_PASSWORD: "root"
 
+  redis:
+    image: redis:6
+    restart: always
+    networks:
+      - rede
+
 networks:
   rede:
 
