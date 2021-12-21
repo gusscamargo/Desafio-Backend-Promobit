@@ -16,7 +16,6 @@ class HomeController extends Controller
     {
         return view("pages.home", [
             "currentPage" => "home",
-            "titlePage" => "Home"
-        ]);
+            "titlePage" => "Home"]);
     }
 }

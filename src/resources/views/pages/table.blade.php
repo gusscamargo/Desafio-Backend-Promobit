@@ -4,28 +4,23 @@
 
 @section('content')
 <div class="row">
-    <div class="sticky-top">
+    <div class="sticky-top" style="margin-left: 90%">
         <a href="/{{$currentPage}}/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Adiconar</a>
     </div>
     <table class="table">
         <thead>
             <tr>
-            <th scope="col">Nome</th>
+                <th scope="col">Nome</th>
             </tr>
         </thead>
         <tbody>
+            @foreach ($data as $item)
             <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
+                <td>
+                    <a href="/{{$currentPage}}/edit/{{$item->id}}">{{$item->name}}</a>
+                </td>                
             </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

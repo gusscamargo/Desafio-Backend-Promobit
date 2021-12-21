@@ -12,17 +12,26 @@
 
 <body>
     <div class="container">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/home" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="/product" class="nav-link{{ $currentPage == "product" ? " active" : "" }}">Produtos</a></li>
-        <li class="nav-item"><a href="/tag" class="nav-link{{ $currentPage == "tag" ? " active" : "" }}">Tags</a></li>
-        </ul>
-    </header>
+        <div class="row">
+            <div class="col-11">
+                <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="/home" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="/product" class="nav-link{{ $currentPage == "product" ? " active" : "" }}">Produtos</a></li>
+                    <li class="nav-item"><a href="/tag" class="nav-link{{ $currentPage == "tag" ? " active" : "" }}">Tags</a></li>
+                </ul>
+            </header>
+            </div>
+            <div class="col-1" style="margin-top: 10px">
+                <a href="/logout" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
     </div>
     <div class="container">
         @yield('content')  
     </div>
+
+
 </body>
 
 <script src="./js/jquery-3.6.0.min.js"></script>
