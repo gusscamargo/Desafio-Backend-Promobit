@@ -17,7 +17,7 @@
             @foreach ($data as $item)
             <tr>
                 <td>
-                    <a href="/{{$currentPage}}/edit/{{$item->id}}">{{$item->name}}</a>
+                    <a href="/{{$currentPage}}/{{$item->id}}">{{$item->name}}</a>
                 </td>                
             </tr>
             @endforeach
