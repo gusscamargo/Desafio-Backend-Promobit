@@ -10,4 +10,5 @@ class Product_Tag extends Model
     use HasFactory;
 
     protected $table = "product_tag";
+    public $timestamps = false;
 }
