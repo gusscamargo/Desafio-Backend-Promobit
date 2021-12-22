@@ -21,6 +21,7 @@ class TagController extends Controller
         return Tag::orderBy('name')->get();
     }
 
+    // Pagina de criação de tag
     public function createPage(Request $request){
         return view("pages.item", [
             "currentPage" => "tag",
@@ -56,6 +57,7 @@ class TagController extends Controller
         return Tag::create($data);
     }
 
+    // Pagina de edição de tag
     public function editPage($id){
 
         $data = $this->findTag($id);

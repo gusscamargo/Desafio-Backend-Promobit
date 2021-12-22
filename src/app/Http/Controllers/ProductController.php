@@ -23,6 +23,7 @@ class ProductController extends Controller
         return Product::orderBy('name')->get();
     }
 
+    // Pagina de Criação de produto
     public function createPage(Request $request)
     {
         $tags = $this->getAllTags();
@@ -81,7 +82,7 @@ class ProductController extends Controller
                 "tag_id" => $tagId
             ];
         }
-
+        
         Product_Tag::insert($data);
     }
 
@@ -103,5 +104,36 @@ class ProductController extends Controller
         return Product::destroy($id);
     }
 
+    // Pagina de edição de produto
+    public function editPage($id){
+
+        $product = $this->findProduct($id);
+        $tags = $this->getAllTags();
+        $tagsRelationated = $this->findTagsRelationated($id);
+
+        echo $tags;
+        echo "<br>";
+        echo $tagsRelationated;
+        die();
+
+        return view("pages.item", [
+            "currentPage" => "product",
+            "titlePage" => "Editar Produto",
+            "data" => [
+                "id" => $product->id,
+                "name" => $product->name,
+                "tags" => $tags,
+                "tagsRelationated" => $tagsRelationated
+            ]
+        ]);
+    }
+
+    private function findProduct($id){
+        return Product::find($id);
+    }
+
+    private function findTagsRelationated($id){
+        return Product_Tag::where("product_id", $id)->get();
+    }
 
 }
