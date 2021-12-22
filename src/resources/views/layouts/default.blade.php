@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Gustavo Michels de Camargo">
-    <link rel="icon" href="./image/icon.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="icon" href="/image/icon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <title>@yield("title")</title>
 </head>
 
@@ -35,6 +35,6 @@
 
 </body>
 
-<script src="./js/jquery-3.6.0.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </html>

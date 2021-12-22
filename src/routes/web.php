@@ -33,19 +33,19 @@ Route::middleware(["auth"])->group(function () {
     Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
     // Tags
-    Route::get("/tag", [TagController::class, "showTags"])->name("tags");
-    Route::get("/tag/{id}", ErrorController::class);
-    Route::put("/tag/{id}", ErrorController::class);
-    Route::get("/tag/create", ErrorController::class);
-    Route::post("/tag/create", ErrorController::class);
-    Route::delete("/tag/{id}", ErrorController::class);
+    Route::get("/tag", [TagController::class, "show"])->name("tags");
+    // Route::get("/tag/{id}", ErrorController::class);
+    // Route::put("/tag/{id}", ErrorController::class);
+    Route::get("/tag/create", [TagController::class, "createPage"]);
+    Route::post("/tag/create", [TagController::class, "register"])->name("registerTag");
+    // Route::delete("/tag/{id}", ErrorController::class);
 
 
     // Produtos
     Route::get("/product", [ProductController::class, "showProducts"])->name("products");
-    Route::get("/product/{id}", ErrorController::class);
-    Route::put("/product/{id}", ErrorController::class);
-    Route::get("/product/create", ErrorController::class);
-    Route::post("/product/create", ErrorController::class);
-    Route::delete("/product/{id}", ErrorController::class);
+    // Route::get("/product/{id}", ErrorController::class);
+    // Route::put("/product/{id}", ErrorController::class);
+    // Route::get("/product/create", ErrorController::class);
+    // Route::post("/product/create", ErrorController::class);
+    // Route::delete("/product/{id}", ErrorController::class);
 });
