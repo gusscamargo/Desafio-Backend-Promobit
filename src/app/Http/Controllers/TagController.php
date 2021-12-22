@@ -31,6 +31,8 @@ class TagController extends Controller
     public function register(Request $request){
         $name = $request->input("name");
 
+        if($name == "") return back()->withErrors(["errors" => ["Tag invalida", "Registre outra tag por favor"]]);
+
         // Verificar se ja não tem essa tag registrada no bd
         if($this->discoverIfExists($name)) return back()->withErrors(["errors" => ["Tag ja Registrada", "Registre outra tag por favor"]]);
 
@@ -66,5 +68,38 @@ class TagController extends Controller
 
     private function findTag($id){
         return Tag::findOrFail($id);
+    }
+
+    public function update(Request $request){
+        $id = $request->input("id");
+        $name = $request->input("name");
+
+        // Verificar se ja não tem essa tag registrada no bd
+        if ($this->discoverIfExists($name)) return back()->withErrors(["errors" => ["Tag ja Registrada", "Registre outra tag por favor"]]);
+
+        $data = [
+            "name" => $name
+        ];
+
+        
+        if (!$this->updateBD($id, $data)) return back()->withErrors(["errors" => "Ocorreu algum problema na atualização da Tag"]);
+
+        return redirect("/tag");
+    }
+
+    private function updateBD($id, $data){
+       return Tag::where("id", $id)->update($data);
+    }
+
+    public function delete(Request $request){
+        $id = $request->input("id");
+
+        if (!$this->deleteBD($id)) return back()->withErrors(["errors" => "Ocorreu algum problema na atualização da Tag"]);
+
+        return redirect("/tag");
+    }
+
+    private function deleteBD($id){
+        return Tag::destroy($id);
     }
 }
