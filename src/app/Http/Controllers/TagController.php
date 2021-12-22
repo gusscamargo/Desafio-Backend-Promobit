@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product_Tag;
 use Illuminate\Http\Request;
 use App\Models\Tag;
 
@@ -94,6 +95,8 @@ class TagController extends Controller
     public function delete(Request $request){
         $id = $request->input("id");
 
+        $this->deleteRelationProduct($id);
+
         if (!$this->deleteBD($id)) return back()->withErrors(["errors" => "Ocorreu algum problema na atualização da Tag"]);
 
         return redirect("/tag");
@@ -101,5 +104,10 @@ class TagController extends Controller
 
     private function deleteBD($id){
         return Tag::destroy($id);
+    }
+
+    private function deleteRelationProduct($tagId)
+    {
+        return Product_Tag::where("tag_id", $tagId)->delete();
     }
 }

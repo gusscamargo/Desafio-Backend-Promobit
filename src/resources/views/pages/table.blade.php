@@ -4,6 +4,17 @@
 
 @section('content')
 
+    @if (count($errors) > 0)
+        <div class="alert alert-danger" role="alert">
+            Ocorreu um problema:
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>  
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="row">
         <div class="sticky-top" style="margin-left: 90%">
             <a href="/{{$currentPage}}/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Adicionar</a>
