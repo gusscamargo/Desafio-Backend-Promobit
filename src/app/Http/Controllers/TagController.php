@@ -17,7 +17,7 @@ class TagController extends Controller
     }
 
     private function getAll(){
-        return Tag::all();
+        return Tag::orderBy('name')->get();
     }
 
     public function createPage(Request $request){

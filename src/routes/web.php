@@ -38,17 +38,18 @@ Route::middleware(["auth"])->group(function () {
     Route::get("/tag/create", [TagController::class, "createPage"]);
     Route::get("/tag/edit", ErrorController::class);
     Route::get("/tag/delete", ErrorController::class);
-    
-    Route::post("/tag/edit", [TagController::class, "update"]);
+
     Route::post("/tag/create", [TagController::class, "register"]);
+    Route::post("/tag/edit", [TagController::class, "update"]);
     Route::post("/tag/delete", [TagController::class, "delete"]);
 
 
     // Produtos
     Route::get("/product", [ProductController::class, "showProducts"])->name("products");
-    // Route::get("/product/{id}", ErrorController::class);
-    // Route::get("/product/create", ErrorController::class);
-    // Route::post("/product/{id}", ErrorController::class);    
-    // Route::post("/product/create", ErrorController::class);
-    // Route::post("/product/{id}", ErrorController::class);
+    Route::get("/product/{id}", ErrorController::class)->where(['id' => "[0-9]+"]);
+    Route::get("/product/create", [ProductController::class, "createPage"]);
+
+    Route::post("/product/create", [ProductController::class, "register"]);
+    // Route::post("/product/edit", [ProductController::class, "update"]);
+    // Route::post("/product/delete", [ProductController::class, "delete"]);
 });
