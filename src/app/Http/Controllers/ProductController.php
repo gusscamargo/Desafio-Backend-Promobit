@@ -84,4 +84,24 @@ class ProductController extends Controller
 
         Product_Tag::insert($data);
     }
+
+    public function delete(Request $request){
+        $id = $request->input("id");
+
+        $this->deleteRelationTag($id);
+        $this->deleteProduct($id);
+
+        return redirect("/product");
+
+    }
+
+    private function deleteRelationTag($productId){
+        return Product_Tag::where("product_id", $productId)->delete();
+    }
+
+    private function deleteProduct($id){
+        return Product::destroy($id);
+    }
+
+
 }

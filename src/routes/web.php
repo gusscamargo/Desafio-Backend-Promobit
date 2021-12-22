@@ -51,5 +51,5 @@ Route::middleware(["auth"])->group(function () {
 
     Route::post("/product/create", [ProductController::class, "register"]);
     // Route::post("/product/edit", [ProductController::class, "update"]);
-    // Route::post("/product/delete", [ProductController::class, "delete"]);
+    Route::post("/product/delete", [ProductController::class, "delete"]);
 });
