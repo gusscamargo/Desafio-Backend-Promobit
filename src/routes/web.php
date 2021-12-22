@@ -34,10 +34,13 @@ Route::middleware(["auth"])->group(function () {
 
     // Tags
     Route::get("/tag", [TagController::class, "show"])->name("tags");
+    Route::get("/tag/{id}", [TagController::class, "registeredPage"])->where(['id' => "[0-9]+"]);
     Route::get("/tag/create", [TagController::class, "createPage"]);
-    Route::get("/tag/{id}", [TagController::class, "registeredPage"]);
+    Route::get("/tag/edit", ErrorController::class);
+    Route::get("/tag/delete", ErrorController::class);
+    
     Route::post("/tag/edit", [TagController::class, "update"]);
-    Route::post("/tag/create", [TagController::class, "register"])->name("registerTag");
+    Route::post("/tag/create", [TagController::class, "register"]);
     Route::post("/tag/delete", [TagController::class, "delete"]);
 
 
