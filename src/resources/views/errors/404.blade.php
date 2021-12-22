@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Gustavo Michels de Camargo">
-    <link rel="stylesheet" type="text/css" href="./css/backToFuture.css">
+    <link rel="stylesheet" type="text/css" href="/css/backToFuture.css">
     <title>Error</title>
 </head>
 
@@ -26,10 +26,10 @@
             <a href="https://www.youtube.com/watch?v=G3AfIvJBcGo">NO</a>
         </div>
     </section>
-    <audio src="./mp3/backToFuture.mp3" autoplay>
+    <audio src="/mp3/backToFuture.mp3" autoplay>
 </body>
 
-<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
 <script>
     audioElement.play();
 </script>
