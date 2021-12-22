@@ -11,4 +11,7 @@ class Tag extends Model
 
     protected $table = "tag";
     public $timestamps = false;
+    protected $fillable = [
+        "name"
+    ];
 }
