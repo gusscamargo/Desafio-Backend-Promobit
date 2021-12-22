@@ -56,7 +56,7 @@ class TagController extends Controller
         return Tag::create($data);
     }
 
-    public function registeredPage($id){
+    public function editPage($id){
 
         $data = $this->findTag($id);
 

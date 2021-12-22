@@ -34,7 +34,7 @@ Route::middleware(["auth"])->group(function () {
 
     // Tags
     Route::get("/tag", [TagController::class, "show"])->name("tags");
-    Route::get("/tag/{id}", [TagController::class, "registeredPage"])->where(['id' => "[0-9]+"]);
+    Route::get("/tag/{id}", [TagController::class, "editPage"])->where(['id' => "[0-9]+"]);
     Route::get("/tag/create", [TagController::class, "createPage"]);
     Route::get("/tag/edit", ErrorController::class);
     Route::get("/tag/delete", ErrorController::class);
@@ -46,7 +46,7 @@ Route::middleware(["auth"])->group(function () {
 
     // Produtos
     Route::get("/product", [ProductController::class, "showProducts"])->name("products");
-    Route::get("/product/{id}", ErrorController::class)->where(['id' => "[0-9]+"]);
+    Route::get("/product/{id}", [ProductController::class, "editPage"])->where(['id' => "[0-9]+"]);
     Route::get("/product/create", [ProductController::class, "createPage"]);
 
     Route::post("/product/create", [ProductController::class, "register"]);
