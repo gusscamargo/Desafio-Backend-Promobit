@@ -37,7 +37,7 @@
       <div class="btn-group" role="group" >
         @foreach ($data["tags"]->all() as $key => $tag)
 
-          <input name="tag[]" type="checkbox" class="btn-check" id="btn-check-{{$key}}-outlined" autocomplete="off" value="{{$tag["id"]}}">
+          <input name="tag[]" type="checkbox" class="btn-check" id="btn-check-{{$key}}-outlined" autocomplete="off" value="{{$tag["id"]}}" {{in_array($tag["id"], $data["tagsRelationated"]) ? "checked" : ""}}>
           <label class="btn btn-outline-secondary" for="btn-check-{{$key}}-outlined" style="margin-left: 2px">{{$tag["name"]}}</label><br>
 
         @endforeach

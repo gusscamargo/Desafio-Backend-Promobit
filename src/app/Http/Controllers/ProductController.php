@@ -82,7 +82,7 @@ class ProductController extends Controller
                 "tag_id" => $tagId
             ];
         }
-        
+
         Product_Tag::insert($data);
     }
 
@@ -111,11 +111,6 @@ class ProductController extends Controller
         $tags = $this->getAllTags();
         $tagsRelationated = $this->findTagsRelationated($id);
 
-        echo $tags;
-        echo "<br>";
-        echo $tagsRelationated;
-        die();
-
         return view("pages.item", [
             "currentPage" => "product",
             "titlePage" => "Editar Produto",
@@ -133,7 +128,15 @@ class ProductController extends Controller
     }
 
     private function findTagsRelationated($id){
-        return Product_Tag::where("product_id", $id)->get();
+        $tagsRelationated = Product_Tag::where("product_id", $id)->get();
+
+        $tagGroup = [];
+
+        foreach($tagsRelationated as $tag){
+            $tagGroup[] = $tag->tag_id;
+        }
+
+        return $tagGroup;
     }
 
 }
