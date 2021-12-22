@@ -13,14 +13,14 @@
         </ul>
     </div>
 @endif
-<form method="POST" action="/{{$currentPage}}/create">
+<form method="{{$data == [] ? "POST" : "PUT"}}" action="/{{$currentPage}}/{{$data == [] ? "create" : "edit"}}">
     @csrf
   <div class="form-group">
     <label for="name">Nome</label>
-    <input name="name" type="text" class="form-control" id="name" placeholder="Digite o nome">
+    <input name="name" type="text" class="form-control" id="name" placeholder="Digite o nome" value="{{$data == [] ? "" : $data["name"]}}">
   </div>
   <div class="col text-center">
-    <button type="submit" class="btn btn-primary">Registrar</button>
+    <button type="submit" class="btn btn-{{$data == [] ? "primary" : "success"}}">{{$data == [] ? "Registrar" : "Salvar"}}</button>
   </div>
 </form>
 @endsection

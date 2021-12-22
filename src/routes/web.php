@@ -34,7 +34,7 @@ Route::middleware(["auth"])->group(function () {
 
     // Tags
     Route::get("/tag", [TagController::class, "show"])->name("tags");
-    // Route::get("/tag/{id}", ErrorController::class);
+    Route::get("/tag/{id}", [TagController::class, "registeredPage"]);
     // Route::put("/tag/{id}", ErrorController::class);
     Route::get("/tag/create", [TagController::class, "createPage"]);
     Route::post("/tag/create", [TagController::class, "register"])->name("registerTag");

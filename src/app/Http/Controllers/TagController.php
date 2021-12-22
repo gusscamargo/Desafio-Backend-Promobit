@@ -52,4 +52,19 @@ class TagController extends Controller
     private function registerInBD($data){
         return Tag::create($data);
     }
+
+    public function registeredPage($id){
+
+        $data = $this->findTag($id);
+
+        return view("pages.item", [
+            "currentPage" => "tag",
+            "titlePage" => "Editar Tag",
+            "data" => $data
+        ]);
+    }
+
+    private function findTag($id){
+        return Tag::findOrFail($id);
+    }
 }
