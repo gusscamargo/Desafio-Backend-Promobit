@@ -37,8 +37,8 @@ Antes de qualquer coisa, avisos:
 2. Caso dê algum erro relacionada a imagem Docker do php-fpm, digitar no terminal `docker-compose build`.
 
 Siga os passos a seguir no terminal
-1.`git clone https://github.com/gusscamargo/Desafio-Promobit`
-2.`cd Desafio-Promobit`
+1. `git clone https://github.com/gusscamargo/Desafio-Promobit`
+2. `cd Desafio-Promobit`
 3. `docker-compose up -d`
 4. `docker-compose exec app composer install`
 
