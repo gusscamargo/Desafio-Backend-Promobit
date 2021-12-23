@@ -45,3 +45,5 @@ Siga os passos a seguir no terminal
 Após o fim dos processos acesse [127.0.0.1](http://127.0.0.1/) ou 127.0.0.1:**NGINX** configurada no arquivo .env
 
 **Você ira se deparar com um formulario de login que pedira usuario e senha, a resposta para ambos é "admin".**
+
+![PHP](https://kinsta.com/pt/wp-content/uploads/sites/3/2018/11/o-php-morreu-0-1.jpg)
