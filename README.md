@@ -42,6 +42,6 @@ Siga os passos a seguir no terminal
 3. `docker-compose up -d`
 4. `docker-compose exec app composer install`
 
-Após o fim dos processos acesse [127.0.0.1](http://127.0.0.1/) ou 127.0.0.1:< NGINX > configurada no arquivo .env
+Após o fim dos processos acesse [127.0.0.1](http://127.0.0.1/) ou 127.0.0.1:**NGINX** configurada no arquivo .env
 
 **Você ira se deparar com um formulario de login que pedira usuario e senha, a resposta para ambos é "admin".**
