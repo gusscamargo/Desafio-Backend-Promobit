@@ -44,7 +44,7 @@ class ProductController extends Controller
     public function register(Request $request)
     {
         $name = $request->input("name");
-        $tags = $request->tag;
+        $tags = isset($request->tag) ? $request->tag : [];
 
 
         if ($name == "") return back()->withErrors(["errors" => ["Produto invalido", "Registre outro produto por favor"]]);
@@ -137,6 +137,25 @@ class ProductController extends Controller
         }
 
         return $tagGroup;
+    }
+
+    public function update(Request $request){
+        $id = $request->input("id");
+        $name = $request->input("name");
+        $tags = isset($request->tag) ? $request->tag : [];
+
+        // Atualizar nome do produtos
+        $this->updateNameBD($id, $name);
+
+        // Atualizar tags relacionadas
+        $this->deleteRelationTag($id);
+        $this->registerTagInProduct($id, $tags);
+
+        return redirect("/product");
+    }
+
+    private function updateNameBD($id, $name){
+        return Product::where("id", $id)->update(["name" => $name]);
     }
 
 }

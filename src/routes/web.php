@@ -48,8 +48,10 @@ Route::middleware(["auth"])->group(function () {
     Route::get("/product", [ProductController::class, "showProducts"])->name("products");
     Route::get("/product/{id}", [ProductController::class, "editPage"])->where(['id' => "[0-9]+"]);
     Route::get("/product/create", [ProductController::class, "createPage"]);
+    Route::get("/product/edit", ErrorController::class);
+    Route::get("/product/delete", ErrorController::class);
 
     Route::post("/product/create", [ProductController::class, "register"]);
-    // Route::post("/product/edit", [ProductController::class, "update"]);
+    Route::post("/product/edit", [ProductController::class, "update"]);
     Route::post("/product/delete", [ProductController::class, "delete"]);
 });
