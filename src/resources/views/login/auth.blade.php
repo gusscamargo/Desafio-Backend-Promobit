@@ -31,10 +31,12 @@
           <form class="card-body cardbody-color p-lg-5" method="POST" action="/login">
             @csrf
             <div class="mb-3">
+              <p>Usuario:</p>
               <input type="text" class="form-control" name="username" aria-describedby="emailHelp"
                 placeholder="User Name">
             </div>
             <div class="mb-3">
+              <p>Senha:</p>
               <input type="password" class="form-control" name="password" placeholder="password">
             </div>
             <div class="text-center">
