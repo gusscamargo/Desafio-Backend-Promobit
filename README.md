@@ -26,8 +26,8 @@ Desenvolvimento de um projeto-aplicação Full Stack com Back End em PHP com con
 1. Ambiente de desenvolvimento Docker.
 2. Sistema de Autenticação com senha criptografada.
 3. Sistema de caching com armazenamento no Redis.
-4. Cadastro de Tags.
-5. Cadastro de Produtos e tags relacionadas.
+4. Cadastro, edição e exclusão de Tags.
+5. Cadastro, edição e exclusão de Produtos e tags relacionadas.
 6. Tratamento de erros de rotas.
 7. **Dica surpresa**: Force um erro **404**. 
 
