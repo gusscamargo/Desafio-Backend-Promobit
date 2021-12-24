@@ -1,10 +1,12 @@
 [URL_DESAFIO]:https://github.com/Promobit/teste-cadastro-produtos
 [Desafio Promobit]:https://github.com/Promobit/teste-cadastro-produtos
 [Clique aqui]:https://github.com/Promobit/teste-cadastro-produtos
+[Link teste logico]:https://github.com/gusscamargo/Desafio-Promobit/blob/main/teste-logica/src/src/ProductStructure.php
 
 # Desafio Promobit
 
-Link do desafio: [Clique aqui]
+Link para resolução do teste logico: [Link teste logico]
+Link do desafio tecnico: [Clique aqui]
 
 ## Objetivo
 Desenvolvimento de um projeto-aplicação Full Stack com Back End em PHP com conexão e interação com um banco de dados relacionado como o MySQL ou PostgreSQL tendo como base e objetivo o [Desafio Promobit].
