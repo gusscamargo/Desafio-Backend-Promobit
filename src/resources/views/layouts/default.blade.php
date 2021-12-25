@@ -13,33 +13,34 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <header class="d-flex justify-content-center py-3">
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="/home" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="/product" class="nav-link{{ $currentPage == "product" ? " active" : "" }}">Produtos</a></li>
-                    <li class="nav-item"><a href="/tag" class="nav-link{{ $currentPage == "tag" ? " active" : "" }}">Tags</a></li>
-                </ul>
-            </header>
-            </div>
-            <div class="col-4" style="margin-top: 10px">
-                <a href="https://github.com/gusscamargo" class="btn btn-primary" target="_blank">
-                    <i class="small material-icons">code</i>
-                    Meu Github
-                </a>
-                <a href="https://www.linkedin.com/in/gustavo-michels-de-camargo/" class="btn btn-primary" target="_blank">
-                    <i class="small material-icons">account_circle</i>
-                    Meu LinkedIn 
-                </a>
-                <a href="/logout" class="btn btn-danger">Logout</a>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 justify-content-center p-2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="/home" class="nav-link{{ $currentPage == "home" ? " active" : "" }}" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="/product" class="nav-link{{ $currentPage == "product" ? " active" : "" }}">Produtos</a></li>
+                        <li class="nav-item"><a href="/tag" class="nav-link{{ $currentPage == "tag" ? " active" : "" }}">Tags</a></li>
+                    </ul>
+                </div>
+                <div class="col-4" style="margin-top: 10px">
+                    <a href="https://github.com/gusscamargo" class="btn btn-primary" target="_blank">
+                        <i class="small material-icons">code</i>
+                        Meu Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/gustavo-michels-de-camargo/" class="btn btn-primary" target="_blank">
+                        <i class="small material-icons">account_circle</i>
+                        Meu LinkedIn 
+                    </a>
+                    <a href="/logout" class="btn btn-danger">Logout</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </header>
+    <main class="container">
         @yield('content')  
-    </div>
+    </main>
 
 
 </body>
