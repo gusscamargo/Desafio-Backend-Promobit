@@ -23,7 +23,7 @@ Link do desafio tecnico: [Clique aqui]
 
 ## Objetivo
 
-Desenvolvimento de um projeto-aplicação Full Stack com Back End em PHP com conexão e interação com um banco de dados relacionado como o MySQL ou PostgreSQL tendo como base e objetivo o [Desafio Promobit].
+Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com um banco de dados relacionado como o MySQL ou PostgreSQL tendo como base e objetivo o [Desafio Promobit].
 
   
 
