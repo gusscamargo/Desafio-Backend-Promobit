@@ -31,7 +31,6 @@ Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com 
 ## O que compõe o projeto?
 
 1. [Docker](https://www.docker.com/)
-2. 
 3. [Docker Compose](https://docs.docker.com/compose/)
 
 4. [NGINX](https://www.nginx.com/)
