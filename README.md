@@ -74,6 +74,8 @@ Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com 
 
 ## Script SQL para extração de relatório do desafio
 
+Podes acessar o banco de dados via phpMyAdmin que se encontra no endereço [127.0.0.1:8080](http://127.0.0.1:8080/)
+
 ```SELECT `tag`.`name` AS nome, (SELECT COUNT(*) FROM `product_tag` WHERE `product_tag`.`tag_id` = `tag`.`id`) AS num_produtos_relacionados from `tag` ORDER BY num_produtos_relacionados DESC```
 
   
