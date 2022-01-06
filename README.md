@@ -72,6 +72,10 @@ Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com 
 
 7. **Dica surpresa**: Force um erro **404**.
 
+## Script SQL para extração de relatório do desafio
+
+```SELECT `tag`.`name` AS nome, (SELECT COUNT(*) FROM `product_tag` WHERE `product_tag`.`tag_id` = `tag`.`id`) AS num_produtos_relacionados from `tag` ORDER BY num_produtos_relacionados DESC```
+
   
 
 ## Como instalar e inicializar
