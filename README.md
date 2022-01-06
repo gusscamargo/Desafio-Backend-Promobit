@@ -1,4 +1,5 @@
 
+
 [URL_DESAFIO]:https://github.com/Promobit/teste-cadastro-produtos
 
 [Desafio Promobit]:https://github.com/Promobit/teste-cadastro-produtos
@@ -30,25 +31,27 @@ Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com 
 ## O que compõe o projeto?
 
 1. [Docker](https://www.docker.com/)
-2. [Docker Compose](https://docs.docker.com/compose/)
+2. 
+3. [Docker Compose](https://docs.docker.com/compose/)
 
-3. [NGINX](https://www.nginx.com/)
+4. [NGINX](https://www.nginx.com/)
 
-4. [PHP 7.4](https://www.php.net/releases/7_4_0.php)
+5. [PHP 7.4](https://www.php.net/releases/7_4_0.php)
+6. [Composer](https://getcomposer.org/)
 
-5. [MySQL](https://www.mysql.com/)
+7. [MySQL](https://www.mysql.com/)
 
-6. [Laravel 8](https://laravel.com/docs/8.x/releases)
+8. [Laravel 8](https://laravel.com/docs/8.x/releases)
 
-7. [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+9. [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
-8. [Redis](https://redis.io/)
+10. [Redis](https://redis.io/)
 
-9. [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+11. [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
-10. [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+12. [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-11. [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+13. [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
   
 
