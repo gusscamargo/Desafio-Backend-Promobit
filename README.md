@@ -24,7 +24,7 @@ Link do desafio tecnico: [Clique aqui]
 
 ## Objetivo
 
-Desenvolvimento de um projeto-aplicação em PHP com conexão e interação com um banco de dados relacionado como o MySQL ou PostgreSQL tendo como base e objetivo o [Desafio Promobit].
+Desenvolvimento de uma aplicação PHP completa utilizando das mais modernas tecnologias presentes no mercado com base no [Desafio Promobit].
 
   
 
